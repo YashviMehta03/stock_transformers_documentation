@@ -1,1 +1,90 @@
-site_name: My Docs
+site_name: "Stock Transformers Documentation"
+site_description: "A comprehensive guide for stock prediction"
+
+theme:
+  name: "material"
+  features:
+    - navigation.tabs       # For horizontal navigation
+    - navigation.top        # Keep the navigation at the top
+    - navigation.sections 
+    - search.suggest
+    - toc.integrate
+    - search.highlight
+    - content.tabs.link
+    - content.code.annotation
+    - content.code.copy  # Moves the TOC to the sidebar (left side)
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode    
+      primary: "teal"
+      accent: "indigo"
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/toggle-switch-off-outline 
+        name: Switch to dark mode
+      primary: "teal"
+      accent: "indigo"
+      
+  logo: "docs/logo.png"
+  favicon: "images/favicon.ico"
+  font:
+    text: "Roboto"
+    code: "Fira Code"
+
+# Enable search functionality
+plugins:
+  - search
+
+# Horizontal Navigation Menu with Top Tabs
+nav:
+  - Homepage: index.md
+  - Learning: learning.md
+  - Time Series: time_series.md
+  - Time2Vec: time2vec.md
+  - LSTM: LSTM.md
+  - Feature Engineering: feature_engineering.md
+  - Transformer: transformer.md
+  - Informer: informer.md
+  - Challenges Faced: challenges_faced.md
+  - Conclusion: conclusion.md
+
+# Extra styling or JS
+extra_css:
+  - stylesheets/custom.css  # We'll create this file for custom horizontal nav styling
+
+# Repository settings for linking to GitHub
+repo_url: "https://github.com/Ghruank/stocktransformers/"
+repo_name: "GitHub Repository"
+
+# Social links (optional)
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/Ghruank/stocktransformers/
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/yourhandle
+
+# Custom footer
+extra:
+  copyright: "Copyright &copy; 2024 Your Name"
+  social:
+    - icon: fontawesome/brands/github
+      link: "https://github.com/yourusername"
+    - icon: fontawesome/brands/linkedin
+      link: "https://linkedin.com/in/yourprofile"
+
+# Use MkDocs' built-in TOC for each page, with sections in the sidebar
+markdown_extensions:
+  # - toc:
+  #     permalink: true
+  - footnotes
+  - def_list
+  - codehilite
+  - admonition
+
+copyright: |
+  &copy; X 2k24 - <a href="https://github.com/Ghruank/stocktransformers/"  target="_blank" rel="noopener">Stock Transformers</a>
