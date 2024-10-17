@@ -38,6 +38,8 @@ theme:
 # Enable search functionality
 plugins:
   - search
+  - table-reader
+  
 
 # Horizontal Navigation Menu with Top Tabs
 nav:
