@@ -1,4 +1,8 @@
+# Transformers
+
 ## What are transformers ?
+
+Transformers are neural network architectures that excel in handling sequential data by using self-attention mechanisms to weigh the importance of each element in the sequence. Unlike traditional models, transformers process input in parallel, allowing for faster training and better handling of long-range dependencies.
 
 ## Why explore transformers for stock predictions ?
 LSTM's might struggle for long range dependencies. They still face challenges when it comes to learning relationships across very distant time steps. 
@@ -7,13 +11,37 @@ Unlike traditional recurrent neural networks (RNNs), Transformers leverage atten
 
 ## Transformer Architechture
 
-EXPLAIN KARNA KOI
+```python
+def transformer_encoder(inputs, head_size, num_heads, ff_dim, dropout=0):
+    x = LayerNormalization(epsilon=1e-6)(inputs)
+    x = MultiHeadAttention(key_dim=head_size, num_heads=num_heads, dropout=dropout)(x, x)
+    x = Add()([x, inputs])
+
+    y = LayerNormalization(epsilon=1e-6)(x)
+    y = Dense(ff_dim, activation="relu")(y)
+    y = Dropout(dropout)(y)
+    y = Dense(inputs.shape[-1])(y)
+    return Add()([y, x])
+```
+
+```python
+def build_transformer_model(input_shape, head_size, num_heads, ff_dim, num_layers, dropout=0):
+    inputs = Input(shape=input_shape)
+    x = inputs
+    for _ in range(num_layers):
+        x = transformer_encoder(x, head_size, num_heads, ff_dim, dropout)
+    x = GlobalAveragePooling1D()(x)
+    x = LayerNormalization(epsilon=1e-6)(x)
+    outputs = Dense(1)(x)
+    return Model(inputs=inputs, outputs=outputs)
+```
 
 ![AA](images/trans_arch.png)
 
 ## Predictions on various Stocks
 
-graphs daalne hai!
+graphs daalne hai! 
+no
 
 ## Drawbacks of Transformer
 
@@ -44,11 +72,3 @@ We would want our model to focus on determining the directional movement of stoc
 Transformer's self attention mechanism helps to capture these long-term overall bullish/bearish trends.
 
 This is wher transformers would be beneficial as they save on the computation cost and provide better scalability than LSTM's for near-real-time prediction strategies.
-# Transformer
-
-## What are Transformers?
-
-Transformers are neural network architectures that excel in handling sequential data by using self-attention mechanisms to weigh the importance of each element in the sequence. Unlike traditional models, transformers process input in parallel, allowing for faster training and better handling of long-range dependencies.
-
-## Why are Transformers not ideal for Time Series Forecasting?
-
