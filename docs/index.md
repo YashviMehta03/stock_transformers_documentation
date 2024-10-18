@@ -5,7 +5,7 @@ Welcome to the **Stock Transformers Documentation** – a comprehensive guide fo
 ## Table of Contents
 
 1. [Project Overview](home.md)
-2. [Mini Project](mini_project.md)
+2. [Mini Project](mini project.md)
 3. [Time Series Analysis](time_series.md)
 4. [Time2Vec](time2vec.md)
 5. [LSTM](LSTM.md)
@@ -13,7 +13,8 @@ Welcome to the **Stock Transformers Documentation** – a comprehensive guide fo
 7. [Transformer](transformer.md)
 8. [Informer](informer.md)
 9. [Challenges Faced](challenges_faced.md)
-10. [Conclusion](conclusion.md)
+10. [Future Scope](future_scope.md)
+11. [Conclusion](conclusion.md)
 
 ## Quick Links
 

@@ -5,6 +5,11 @@ It requires using domain knowledge to select and transform the most relevant var
 
 The goal of feature engineering and selection is to improve the performance of machine learning (ML) algorithms.
 
+## Why do we need feature engineering in stocks?
+
+Raw stock prices can be noisy and may not always convey meaningful information for a machine learning model. Feature engineering transforms this noisy data into more informative features that allow the model to focus on key patterns, reducing the chances of being misled by noise or random fluctuations in the data.
+Adding indicators provide statistical insights into market trends and behaviors, which are crucial for making informed predictions.
+
 ## Steps invlolved
 
 ### Data preparation
@@ -38,10 +43,6 @@ Bollinger Bands help gauge the volatility of stocks to determine if they are ove
 
 Bands appear on stock charts as three lines that move with the price. The center line is the stock price's 20-day simple moving average (SMA). The upper and lower bands are set at a certain number of standard deviations, usually two, above and below the middle line.
 
-## Sample dataset
-
-<!-- pip install mkdocs-table-reader-plugin -->
-![Dataset]("sample_dataset.jpg")
 
 
 
