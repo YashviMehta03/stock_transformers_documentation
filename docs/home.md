@@ -1,6 +1,6 @@
 # Welcome to Stock Transformers !
 
-Mentees - Khush Agarwal, Yashvi Mehta, Ghruank Kothare <br> Mentors - Tvisha Vedat, Kindipsingh Malhi
+Mentees - Khush Agarwal, Yashvi Mehta, Ghruank Kothare <br> Mentors - Tvisha Vedant, Kindipsingh Malhi
 
 ## Project Idea 
 
