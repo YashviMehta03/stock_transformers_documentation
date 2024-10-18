@@ -3,6 +3,15 @@
 Long Short-Term Memory (LSTM) is a type of recurrent neural network (RNN) that can process and analyze sequential data, such as text, speech, and time series.
 LSTMs are well-suited for problems involving large data sequences and can identify both short-term and long-term dependencies.
 
+## Why LSTM for stock predictions ?
+
+* Long Short-Term Memory (LSTM) is a type of recurrent neural network (RNN) that can process and analyze sequential data, such as time series. ​
+
+* Stock prices, are non-stationary and exhibit trends and seasonality. LSTMs can handle these non-linear relationships within the data.​
+
+* LSTM's can learn long and short term dependencies by selectively retaining information through the memory cell and gates.​
+
+* Our LSTM model takes 5 features namely, Open, High, Low, Adjusted close and Volume and label is the Closing Price .
 ## LSTM model layers
 
 ``` python

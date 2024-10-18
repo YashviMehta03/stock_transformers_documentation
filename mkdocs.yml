@@ -4,8 +4,8 @@ site_description: "A comprehensive guide for stock prediction"
 theme:
   name: "material"
   features:
-    - navigation.tabs       # For horizontal navigation
-    - navigation.top        # Keep the navigation at the top
+    # - navigation.tabs       # For horizontal navigation
+    # - navigation.top        # Keep the navigation at the top
     - navigation.sections 
     - search.suggest
     - toc.integrate
@@ -29,7 +29,7 @@ theme:
       primary: "teal"
       accent: "indigo"
       
-  logo: "docs/logo.png"
+  # logo: "logo.png"
   favicon: "images/favicon.ico"
   font:
     text: "Roboto"
@@ -43,8 +43,10 @@ plugins:
 
 # Horizontal Navigation Menu with Top Tabs
 nav:
-  - Homepage: index.md
-  - Learning: learning.md
+  - Index : index.md
+  - Project Overview: home.md
+  # - Learning: learning.md
+  - Mini Project : mini project.md
   - Time Series: time_series.md
   - Time2Vec: time2vec.md
   - LSTM: LSTM.md
@@ -53,6 +55,7 @@ nav:
   - Informer: informer.md
   - Challenges Faced: challenges_faced.md
   - Conclusion: conclusion.md
+
 
 # Extra styling or JS
 extra_css:
