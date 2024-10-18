@@ -44,4 +44,11 @@ We would want our model to focus on determining the directional movement of stoc
 Transformer's self attention mechanism helps to capture these long-term overall bullish/bearish trends.
 
 This is wher transformers would be beneficial as they save on the computation cost and provide better scalability than LSTM's for near-real-time prediction strategies.
+# Transformer
+
+## What are Transformers?
+
+Transformers are neural network architectures that excel in handling sequential data by using self-attention mechanisms to weigh the importance of each element in the sequence. Unlike traditional models, transformers process input in parallel, allowing for faster training and better handling of long-range dependencies.
+
+## Why are Transformers not ideal for Time Series Forecasting?
 
